@@ -3,7 +3,7 @@ var router = express.Router();
 var fs = require("fs");
 
 /* GET home page. */
-router.post("/", function(req, res, next) {
+router.get("/", function(req, res, next) {
   __filename = "./data/data-sample.json";
   let rawdata = fs.readFileSync(__filename);
   let data_array = JSON.parse(rawdata);
